@@ -1,5 +1,4 @@
-
-aspring:
+spring:
   datasource:
     url: jdbc:h2:tcp://localhost/~/fitin
     username: sa
