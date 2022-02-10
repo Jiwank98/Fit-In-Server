@@ -24,7 +24,6 @@ public class Account {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private Role role;
 
 

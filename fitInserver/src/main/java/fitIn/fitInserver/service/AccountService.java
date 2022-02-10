@@ -2,7 +2,7 @@ package fitIn.fitInserver.service;
 
 
 import fitIn.fitInserver.domain.Account;
-import fitIn.fitInserver.domain.repository.AccountRepository;
+import fitIn.fitInserver.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,5 +37,12 @@ public class AccountService {
 
     public Account findOne(Long accountId){
         return accountRepository.findOne(accountId);
+    }
+
+
+    @Transactional
+    public void update(Long id, String password){
+        Account account = accountRepository.findOne(id);
+        account.setPassword(password);
     }
 }
